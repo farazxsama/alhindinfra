@@ -28,27 +28,16 @@ export default function AboutIntro() {
 
                         <div className="space-y-4 mb-10">
                             <p className="text-[#6B7280] text-base leading-relaxed">
-                                Al Hind Infra was founded with a singular purpose: to bring
-                                genuine quality and transparency to real estate development.
-                                What began as a small team with a vision has grown into a
-                                name trusted across residential and commercial landscapes.
+                                Al Hind Infra was established with a clear vision to make land ownership simple, secure, and rewarding. We specialize in offering premium residential plots in carefully selected locations, helping individuals and families invest in opportunities that deliver long-term value and future growth.
                             </p>
                             <p className="text-[#6B7280] text-base leading-relaxed">
-                                Over the years, we have delivered premium townships,
-                                residences and commercial spaces, each shaped by careful
-                                planning, honest documentation and a deep respect for the
-                                people who invest their trust in us.
+                                Every project is thoughtfully planned with a strong focus on clear legal documentation, strategic locations, and customer satisfaction. We believe that purchasing land is one of life's most important investments, and our commitment is to make that journey transparent, reliable, and hassle-free.
                             </p>
                             <p className="text-[#6B7280] text-base leading-relaxed">
-                                Every project we undertake is guided by three principles:
-                                enduring quality, complete transparency and long-term value
-                                for our customers. We believe a home or an investment should
-                                never come with uncertainty.
+                                Whether you're planning to build your dream home or looking for a smart real estate investment, Al Hind Infra provides well-planned plotted developments designed to meet your aspirations today while creating value for tomorrow.
                             </p>
                             <p className="text-[#6B7280] text-base leading-relaxed">
-                                Today, Al Hind Infra continues to expand its footprint,
-                                building landmarks that stand as a reflection of our
-                                commitment to craftsmanship and integrity.
+                                With integrity, professionalism, and a customer-first approach at the heart of everything we do, we continue to build lasting relationships by helping our clients invest with confidence.
                             </p>
                         </div>
 
@@ -61,9 +50,7 @@ export default function AboutIntro() {
                                     Our Mission
                                 </h3>
                                 <p className="text-sm text-[#6B7280] leading-relaxed">
-                                    To deliver premium, transparent and trustworthy real
-                                    estate developments that create lasting value for every
-                                    customer.
+                                    To provide premium plotted developments with transparent processes, verified legal documentation, and strategic locations that empower our customers to invest with complete confidence.
                                 </p>
                             </div>
 
@@ -75,9 +62,7 @@ export default function AboutIntro() {
                                     Our Vision
                                 </h3>
                                 <p className="text-sm text-[#6B7280] leading-relaxed">
-                                    To be recognized as a leading developer known for
-                                    landmark projects, ethical practices and enduring
-                                    customer trust.
+                                    To become a trusted name in plotted developments by delivering exceptional investment opportunities, maintaining the highest standards of transparency, and creating lasting value for every customer.
                                 </p>
                             </div>
                         </div>

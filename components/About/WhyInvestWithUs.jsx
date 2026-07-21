@@ -4,11 +4,11 @@ import { FiArrowRight, FiCheck } from 'react-icons/fi';
 
 const highlights = [
     'Prime Locations',
-    'Clear Legal Documentation',
-    'High Growth Potential',
-    'Trusted Development',
-    'Modern Infrastructure',
-    'Excellent Customer Support',
+    'High Appreciation Potential',
+    'Well-Planned Layouts',
+    'Verified Legal Documentation',
+    'Transparent Buying Process',
+    'Dedicated Customer Support',
 ];
 
 export default function WhyInvestWithUs() {
@@ -27,10 +27,7 @@ export default function WhyInvestWithUs() {
                         </h2>
 
                         <p className="text-[#6B7280] text-base leading-relaxed max-w-lg mb-9">
-                            We go beyond construction to deliver investments you can trust.
-                            Every project we undertake is backed by careful planning,
-                            complete transparency and a genuine commitment to long-term
-                            value for our customers.
+                            Invest with confidence in premium residential plots located in high-growth areas. At Al Hind Infra, we combine strategic locations, transparent documentation, and customer-focused service to help you make secure investments with lasting value.
                         </p>
 
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">

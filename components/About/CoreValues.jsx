@@ -4,45 +4,48 @@ import {
   FiFileText,
   FiZap,
   FiHeart,
+  FiUsers,
+  FiTrendingUp,
+  FiShield,
 } from 'react-icons/fi';
 import { FaHandshake } from "react-icons/fa";
 
 const coreValues = [
   {
-    icon: FiAward,
-    title: 'Quality Construction',
-    description:
-      'Every project is built using premium materials and rigorous quality checks at each stage.',
-  },
-  {
     icon: FaHandshake,
     title: 'Transparency',
     description:
-      'Honest communication and clear processes with no hidden terms, from booking to handover.',
+      'We believe in honest communication, clear pricing, and complete transparency throughout every step of your property investment journey.',
   },
   {
     icon: FiMapPin,
     title: 'Prime Locations',
     description:
-      'Every development is chosen for strong connectivity and long-term growth potential.',
+      'Every plotted development is carefully selected in strategically growing locations with excellent connectivity and strong future appreciation potential.',
   },
   {
     icon: FiFileText,
-    title: 'Legal Documentation',
+    title: 'Verified Documentation',
     description:
-      'Fully approved layouts with clear titles, giving customers complete peace of mind.',
+      'Every plot is backed by clear legal documentation and verified ownership, giving you complete confidence and peace of mind.',
   },
   {
-    icon: FiZap,
-    title: 'Innovation',
+    icon: FiUsers,
+    title: 'Customer First',
     description:
-      'Modern design and planning practices that shape spaces for how people live today.',
+      'Your goals are our priority. We provide personalized guidance and dedicated support from your first inquiry to plot registration.',
   },
   {
-    icon: FiHeart,
-    title: 'Customer Satisfaction',
+    icon: FiTrendingUp,
+    title: 'Long-Term Value',
     description:
-      'A customer-first approach that guides every decision, from design to delivery.',
+      'We focus on offering premium plots with strong appreciation potential, helping customers build wealth through smart land investments.',
+  },
+  {
+    icon: FiShield,
+    title: 'Trust & Integrity',
+    description:
+      'Integrity is at the heart of everything we do. We build lasting relationships through ethical practices, reliability, and customer trust.',
   },
 ];
 

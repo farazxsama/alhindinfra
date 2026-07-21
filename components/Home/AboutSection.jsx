@@ -2,28 +2,28 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {
   FiArrowRight,
-  FiShield,
   FiMapPin,
-  FiRefreshCw,
-  FiUsers,
+  FiFileText,
+  FiTrendingUp,
+  FiShield,
 } from 'react-icons/fi';
 
 const features = [
   {
-    icon: FiShield,
-    title: 'Trusted Developer',
-  },
-  {
     icon: FiMapPin,
-    title: 'Premium Locations',
+    title: "Prime Locations",
   },
   {
-    icon: FiRefreshCw,
-    title: 'Transparent Process',
+    icon: FiFileText,
+    title: "Clear Legal Documentation",
   },
   {
-    icon: FiUsers,
-    title: 'Customer First',
+    icon: FiTrendingUp,
+    title: "High Investment Potential",
+  },
+  {
+    icon: FiShield,
+    title: "Trusted & Transparent",
   },
 ];
 
@@ -48,17 +48,13 @@ export default function AboutSection() {
             </span>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-[#1A1A1A] mb-6">
-              Building Trust.
+              Own Premium Plots
               <br />
-              Creating <span className="text-[#C9A227]">Landmarks</span>.
+              Shape Your <span className="text-[#C9A227]">Future</span>.
             </h2>
 
             <p className="text-[#6B7280] text-base leading-relaxed mb-10 max-w-xl">
-              We develop premium residential and commercial projects with a
-              vision to deliver quality, transparency and long-term value to
-              our customers. Every landmark we build reflects two decades of
-              craftsmanship, integrity and an uncompromising standard of
-              excellence.
+              Al Hind Infra offers premium residential plots in strategically located layouts near Hyderabad. With clear legal documentation, excellent connectivity, and strong investment potential, we help you secure a valuable future.
             </p>
 
             <div className="grid grid-cols-2 gap-5 mb-10">

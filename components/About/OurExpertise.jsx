@@ -5,23 +5,23 @@ import { FiArrowRight, FiHome, FiMapPin, FiFileText, FiTrendingUp } from 'react-
 const expertiseFeatures = [
   {
     icon: FiHome,
-    title: 'Premium Developments',
-    description: 'Carefully planned residential communities.',
+    title: 'Premium Plots',
+    description: 'Carefully planned residential plots designed for comfortable living and long-term value.',
   },
   {
     icon: FiMapPin,
     title: 'Prime Locations',
-    description: 'Strategically located projects with excellent connectivity.',
+    description: 'Plots located in fast-growing areas with excellent connectivity and future potential.',
   },
   {
     icon: FiFileText,
-    title: 'Transparent Documentation',
-    description: 'Clear legal processes and approved developments.',
+    title: 'Verified Documentation',
+    description: 'Clear legal titles and transparent documentation for a secure buying experience.',
   },
   {
     icon: FiTrendingUp,
-    title: 'Investment Potential',
-    description: 'Projects designed for long-term appreciation and growth.',
+    title: 'High Appreciation',
+    description: 'Investment-ready plots with strong potential for long-term value and returns.',
   },
 ];
 
@@ -46,18 +46,14 @@ export default function OurExpertise() {
             </span>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-[#1A1A1A] mb-6">
-              Building Value Through{' '}
-              <span className="text-[#C9A227]">Every Investment</span>
+              Helping You Make{' '}
+              <span className="text-[#C9A227]">Smarter Land Investments</span>
             </h2>
 
             <p className="text-[#6B7280] text-base leading-relaxed max-w-xl mb-10">
-              With deep expertise in developing premium residential layouts,
-              Al Hind Infra ensures every project is legally compliant, well
-              planned and built to last. From plotted developments to
-              full-scale residential communities, we combine meticulous
-              documentation with strategic locations, giving our customers
-              confidence in every investment and lasting value for the
-              years ahead.
+              Al Hind Infra specializes in offering premium residential plots in carefully selected locations with excellent growth potential. Our focus is on providing legally verified plots, transparent documentation, and thoughtfully planned layouts that give every customer complete confidence in their investment.
+
+              Whether you're purchasing land to build your dream home or to secure your financial future, our expertise ensures a seamless and trustworthy buying experience from inquiry to ownership.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-10">

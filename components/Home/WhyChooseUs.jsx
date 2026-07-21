@@ -14,23 +14,23 @@ const reasons = [
   },
   {
     icon: FiFileText,
-    title: 'Clear & Legal Documentation',
+    title: 'Verified Legal Documentation',
   },
   {
     icon: PiRoadHorizonBold,
-    title: 'Modern Infrastructure',
+    title: 'Well-Planned Layouts',
   },
   {
     icon: FiTrendingUp,
-    title: 'High Investment Potential',
+    title: 'Excellent Appreciation Potential',
   },
   {
     icon: FiUsers,
-    title: 'Trusted Company',
+    title: 'Transparent & Trusted',
   },
   {
     icon: FiDollarSign,
-    title: 'Affordable Pricing',
+    title: 'Competitive Pricing',
   },
 ];
 
@@ -41,10 +41,10 @@ export default function WhyChooseUs() {
         <div className="mb-14">
           <span className="inline-flex items-center gap-2 text-[#C9A227] text-xs sm:text-sm tracking-[0.25em] uppercase font-medium mb-5">
             <span className="w-6 h-px bg-[#C9A227]" />
-            Why Choose Al Hind Infra
+            WHY INVEST WITH AL HIND INFRA
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-white">
-            Why People <span className="text-[#C9A227]">Choose Us</span>
+            Why Investors <span className="text-[#C9A227]">Choose Al Hind Infra</span>
           </h2>
         </div>
 

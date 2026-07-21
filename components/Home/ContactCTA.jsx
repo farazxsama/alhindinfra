@@ -35,14 +35,12 @@ export default function ContactCTA() {
             </span>
 
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-[#1A1A1A] mb-6">
-              Let&apos;s Help You Find the{' '}
-              <span className="text-[#C9A227]">Right Investment</span>
+              Let&apos;s Help You Find{' '}
+              <span className="text-[#C9A227]">Your Perfect Plot</span>
             </h2>
 
             <p className="text-[#6B7280] text-base leading-relaxed mb-10 max-w-lg">
-              Whether you&apos;re looking for a dream home or a high-potential
-              investment, our team is here to guide you through every step,
-              from site visits to final documentation.
+              Whether you&apos;re looking to build your dream home or invest in premium residential plots, our experts are here to guide you, from selecting the right plot to site visits and seamless legal documentation.
             </p>
 
             <div className="space-y-6 mb-10">
@@ -94,12 +92,11 @@ export default function ContactCTA() {
               </span>
 
               <h3 className="font-serif text-3xl sm:text-4xl text-white leading-tight mb-4">
-                Ready to Invest?
+                Ready to own your dream plot?
               </h3>
 
               <p className="text-white/70 text-base leading-relaxed mb-10 max-w-sm">
-                Speak with our advisory team today and discover the right
-                property for your future.
+                Connect with our property experts today to explore premium plots, schedule a free site visit, and make a confident investment for your future.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">

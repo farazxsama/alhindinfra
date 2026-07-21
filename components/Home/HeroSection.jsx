@@ -8,7 +8,7 @@ export default function HeroSection() {
         <section className="relative min-h-screen w-full overflow-hidden">
             <div className="absolute inset-0">
                 <Image
-                    src="/img/hero-banner.png"
+                    src="/img/hero-banner-3.png"
                     alt="Premium residential Building"
                     fill
                     priority
@@ -17,7 +17,7 @@ export default function HeroSection() {
                 {/* <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/25" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/20" /> */}
                 {/* <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/60 to-transparent"></div> */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.99)_0%,rgba(0,0,0,0.80)_20%,rgba(0,0,0,0.60)_40%,transparent_100%)]"></div>
+                <div className="absolute inset-0 bg-[linear-gradient(to_right,rgba(0,0,0,0.80)_0%,rgba(0,0,0,0.70)_20%,rgba(0,0,0,0.60)_50%,transparent_100%)]"></div>
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 pt-32 pb-16 lg:pt-24 min-h-screen flex items-center">
@@ -25,18 +25,16 @@ export default function HeroSection() {
                     <div className="max-w-xl">
                         <span className="inline-flex items-center gap-2 text-[#C9A227] text-xs sm:text-sm tracking-[0.25em] uppercase font-medium mb-6">
                             <span className="w-6 h-px bg-[#C9A227]" />
-                            Premium Real Estate Development
+                            PREMIUM PLOTTED DEVELOPMENTS
                         </span>
                         <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl leading-[1.15] mb-6">
-                            <span className="text-white">Building Tomorrow&apos;s</span>
+                            <span className="text-white">Own Premium Plots,</span>
                             <br />
-                            <span className="text-[#C9A227]">Landmarks,</span>{' '}
-                            <span className="text-white">Today</span>
+                            <span className="text-[#C9A227]">Build</span>{' '}
+                            <span className="text-white">Your Future</span>
                         </h1>
                         <p className="text-white/80 text-base sm:text-lg leading-relaxed mb-10 max-w-lg">
-                            Al Hind Infra is committed to creating exceptional spaces that
-                            blend modern design, premium locations and trusted development
-                            for a better tomorrow.
+                            Discover legally verified residential plots in prime locations near Hyderabad. Invest with confidence in thoughtfully planned layouts offering excellent connectivity and long-term value.
                         </p>
                         <div className="flex flex-wrap items-center gap-4">
                             <Link
