@@ -11,8 +11,8 @@ const companyLinks = [
 ];
 
 const projectLinks = [
-    { name: 'Ongoing Projects', href: '/ongoing-projects' },
-    { name: 'Completed Projects', href: '/completed-projects' },
+    { name: 'Ongoing Projects', href: '/ongoing' },
+    { name: 'Completed Projects', href: '/completed' },
 ];
 
 const socialLinks = [
