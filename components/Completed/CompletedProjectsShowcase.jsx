@@ -47,7 +47,7 @@ function ProjectCard({ project }) {
         />
         <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-[#C9A227] text-[#111111] text-[10px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full">
           <span className="w-1.5 h-1.5 rounded-full bg-[#111111]" />
-          Ongoing
+          Completed
         </span>
       </div>
 
@@ -90,24 +90,22 @@ function ProjectCard({ project }) {
   );
 }
 
-export default function OngoingProjectsShowcase() {
+export default function CompletedProjectsShowcase() {
   return (
     <section className="bg-[#F8F8F6] py-20 sm:py-28">
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex flex-col items-center text-center mb-14">
           <span className="inline-flex items-center gap-2 text-[#C9A227] text-xs sm:text-sm tracking-[0.25em] uppercase font-medium mb-5">
             <span className="w-6 h-px bg-[#C9A227]" />
-            Our Developments
+            COMPLETED DEVELOPMENTS
           </span>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-[2.75rem] leading-tight text-[#1A1A1A] mb-5">
-            Projects Under
+            Successfully Delivered
             <br />
-            Development
+            Projects
           </h2>
           <p className="text-[#6B7280] text-base leading-relaxed max-w-2xl">
-            Browse our ongoing plotted developments featuring premium
-            locations, verified documentation, and carefully planned layouts
-            designed for future growth.
+            Explore our completed plotted developments, Successfully delivered with quality planning, verified documentation, and lasting investment value.
           </p>
         </div>
 

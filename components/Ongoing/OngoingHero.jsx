@@ -21,11 +21,11 @@ export default function OngoingHero() {
         </span>
 
         <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl text-white leading-tight mb-5 max-w-2xl">
-          Discover Our Current Developments
+          Active Plot Projects
         </h1>
 
         <p className="text-white/80 text-base sm:text-lg leading-relaxed max-w-xl">
-          Explore our ongoing premium plotted developments located in strategically growing areas, thoughtfully planned to offer excellent connectivity and long-term investment value.
+          Discover premium plotted developments in prime locations designed for future growth and lasting value.
         </p>
       </div>
     </section>

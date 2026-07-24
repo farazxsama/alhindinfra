@@ -12,8 +12,12 @@ const navLinks = [
 ];
 
 const ongoingProjects = [
-  { name: 'Skyline Residences', href: '/ongoing-projects/skyline-residences' },
-  { name: 'Emerald Heights', href: '/ongoing-projects/emerald-heights' },
+  { name: 'HillTop City Phase 1', href: '/ongoing/hilltop-1' },
+  { name: 'HillTop City Phase 3', href: '/ongoing/hilltop-3' },
+  { name: 'Global City Phase 1', href: '/ongoing/global-city' },
+  { name: 'Global City Phase 2', href: '/ongoing/global-2' },
+  { name: 'Regional City', href: '/ongoing/regional-city' },
+
 ];
 
 const completedProjects = [
@@ -70,12 +74,13 @@ export default function Header() {
             ))}
 
             <div className="relative group">
-              <button
+              <Link
+                href="/ongoing"
                 className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors duration-300 hover:text-[#C9A227] ${linkColor}`}
               >
                 Ongoing Projects
                 <FiChevronDown size={14} />
-              </button>
+              </Link>
               <div className="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="bg-white rounded-md shadow-xl border border-[#E5E7EB] py-2 w-56">
                   {ongoingProjects.map((p) => (
@@ -92,12 +97,13 @@ export default function Header() {
             </div>
 
             <div className="relative group">
-              <button
+              <Link
+                href="/completed"
                 className={`flex items-center gap-1 text-sm font-medium tracking-wide transition-colors duration-300 hover:text-[#C9A227] ${linkColor}`}
               >
                 Completed Projects
                 <FiChevronDown size={14} />
-              </button>
+              </Link>
               <div className="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                 <div className="bg-white rounded-md shadow-xl border border-[#E5E7EB] py-2 w-56">
                   {completedProjects.map((p) => (

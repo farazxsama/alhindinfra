@@ -1,7 +1,14 @@
 import React from 'react'
+import CompletedHero from "@/components/Completed/CompletedHero";
+import CompletedProjectsShowcase from "@/components/Completed/CompletedProjectsShowcase"
 
-export const page = () => {
+const page = () => {
   return (
-    <div>page</div>
+    <div>
+      <CompletedHero/>
+      <CompletedProjectsShowcase/>
+    </div>
   )
 }
+
+export default page;
