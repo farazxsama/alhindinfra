@@ -89,7 +89,7 @@ export default function ContactSection() {
 
                         <div>
                             <EnquiryForm
-                                variant="light"
+                                variant="dark"
                                 title="Send Us a Message"
                                 buttonText="Submit Enquiry"
                                 note="Our team will contact you within 24 hours."

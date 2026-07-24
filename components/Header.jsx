@@ -21,8 +21,22 @@ const ongoingProjects = [
 ];
 
 const completedProjects = [
-  { name: 'Royal Enclave', href: '/completed-projects/royal-enclave' },
-  { name: 'Golden Meadows', href: '/completed-projects/golden-meadows' },
+  { name: 'Imperial City', href: '/completed/imperial-city' },
+  { name: 'Crystal City Project', href: '/completed/crystal-city' },
+  { name: 'Hilton City', href: '/completed/hilton-city' },
+  { name: 'Express City', href: '/completed/express-city' },
+  { name: 'Highway City', href: '/completed/highway-city' },
+  { name: 'Highway City Phase 2', href: '/completed/highway-phase-2' },
+  { name: 'Silver City', href: '/completed/silver-city' },
+  { name: 'Future City', href: '/completed/future-city' },
+  { name: 'Pearl City', href: '/completed/pearl-city' },
+  { name: 'Peace City', href: '/completed/peace-city' },
+  { name: 'Prime City', href: '/completed/prime-city' },
+  { name: 'Falcon City', href: '/completed/falcon-city' },
+  { name: 'Dream Home', href: '/completed/dream-home' },
+  { name: 'Regional City', href: '/completed/regional-city' },
+  { name: 'Natural City', href: '/completed/natural-city' },
+  { name: 'Falcon City Phase 4', href: '/completed/falcon-phase-4' },
 ];
 
 export default function Header() {
