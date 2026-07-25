@@ -52,10 +52,10 @@ export default function ProjectHero({ project }) {
                 <FiMapPin className="text-[#C9A227]" size={16} />
                 {project.hero.location}
               </div>
-              <div className="flex items-center gap-2 text-white/90 text-sm font-medium">
+              {/* <div className="flex items-center gap-2 text-white/90 text-sm font-medium">
                 <FiSquare className="text-[#C9A227]" size={16} />
                 {project.hero.plotSize}
-              </div>
+              </div> */}
               <div className="flex items-center gap-2 text-white/90 text-sm font-medium">
                 <FiCheckCircle className="text-[#C9A227]" size={16} />
                 {project.hero.approval}

@@ -42,7 +42,6 @@ const completedProjects = [
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [mobileDropdown, setMobileDropdown] = useState(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -50,10 +49,6 @@ export default function Header() {
     window.addEventListener('scroll', onScroll);
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
-
-  const toggleMobileDropdown = (key) => {
-    setMobileDropdown((prev) => (prev === key ? null : key));
-  };
 
   const linkColor = scrolled ? 'text-[#111111]' : 'text-white';
 
@@ -96,7 +91,7 @@ export default function Header() {
                 <FiChevronDown size={14} />
               </Link>
               <div className="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-white rounded-md shadow-xl border border-[#E5E7EB] py-2 w-56">
+                <div className="bg-white rounded-md shadow-xl border border-[#E5E7EB] py-2 w-56 max-h-80 overflow-y-auto">
                   {ongoingProjects.map((p) => (
                     <Link
                       key={p.name}
@@ -119,7 +114,7 @@ export default function Header() {
                 <FiChevronDown size={14} />
               </Link>
               <div className="absolute left-0 top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                <div className="bg-white rounded-md shadow-xl border border-[#E5E7EB] py-2 w-56">
+                <div className="bg-white rounded-md shadow-xl border border-[#E5E7EB] py-2 w-56 max-h-80 overflow-y-auto">
                   {completedProjects.map((p) => (
                     <Link
                       key={p.name}
@@ -155,18 +150,6 @@ export default function Header() {
               <FiPhone size={16} />
               Call Now
             </a>
-            {/* <a
-              href="https://wa.me/911234567890"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`flex items-center justify-center w-10 h-10 rounded-full border transition-colors duration-300 ${
-                scrolled
-                  ? 'border-[#E5E7EB] text-[#111111] hover:border-[#C9A227] hover:text-[#C9A227]'
-                  : 'border-white/40 text-white hover:border-[#C9A227] hover:text-[#C9A227]'
-              }`}
-            >
-              <FaWhatsapp size={18} />
-            </a> */}
           </div>
 
           <button
@@ -193,60 +176,48 @@ export default function Header() {
               </Link>
             ))}
 
-            <div className="border-b border-[#E5E7EB]">
-              <button
-                onClick={() => toggleMobileDropdown('ongoing')}
-                className="w-full flex items-center justify-between py-3 text-sm font-medium text-[#111111]"
+            <div className="border-b border-[#E5E7EB] py-3">
+              <Link
+                href="/ongoing"
+                onClick={() => setMobileOpen(false)}
+                className="text-sm font-medium text-[#111111]"
               >
                 Ongoing Projects
-                <FiChevronDown
-                  size={16}
-                  className={`transition-transform duration-300 ${mobileDropdown === 'ongoing' ? 'rotate-180' : ''
-                    }`}
-                />
-              </button>
-              {mobileDropdown === 'ongoing' && (
-                <div className="pb-3 pl-4 flex flex-col">
-                  {ongoingProjects.map((p) => (
-                    <Link
-                      key={p.name}
-                      href={p.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="py-2 text-sm text-[#6B7280] hover:text-[#C9A227]"
-                    >
-                      {p.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              </Link>
+              <div className="pt-2 pl-4 flex flex-col max-h-56 overflow-y-auto">
+                {ongoingProjects.map((p) => (
+                  <Link
+                    key={p.name}
+                    href={p.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="py-2 text-sm text-[#6B7280] hover:text-[#C9A227]"
+                  >
+                    {p.name}
+                  </Link>
+                ))}
+              </div>
             </div>
 
-            <div className="border-b border-[#E5E7EB]">
-              <button
-                onClick={() => toggleMobileDropdown('completed')}
-                className="w-full flex items-center justify-between py-3 text-sm font-medium text-[#111111]"
+            <div className="border-b border-[#E5E7EB] py-3">
+              <Link
+                href="/completed"
+                onClick={() => setMobileOpen(false)}
+                className="text-sm font-medium text-[#111111]"
               >
                 Completed Projects
-                <FiChevronDown
-                  size={16}
-                  className={`transition-transform duration-300 ${mobileDropdown === 'completed' ? 'rotate-180' : ''
-                    }`}
-                />
-              </button>
-              {mobileDropdown === 'completed' && (
-                <div className="pb-3 pl-4 flex flex-col">
-                  {completedProjects.map((p) => (
-                    <Link
-                      key={p.name}
-                      href={p.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="py-2 text-sm text-[#6B7280] hover:text-[#C9A227]"
-                    >
-                      {p.name}
-                    </Link>
-                  ))}
-                </div>
-              )}
+              </Link>
+              <div className="pt-2 pl-4 flex flex-col max-h-56 overflow-y-auto">
+                {completedProjects.map((p) => (
+                  <Link
+                    key={p.name}
+                    href={p.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="py-2 text-sm text-[#6B7280] hover:text-[#C9A227]"
+                  >
+                    {p.name}
+                  </Link>
+                ))}
+              </div>
             </div>
 
             <Link
