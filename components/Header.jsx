@@ -66,7 +66,7 @@ export default function Header() {
               width={110}
               height={100}
               priority
-              className="object-cover"
+              className="object-cover w-auto h-auto"
             />
 
           </Link>

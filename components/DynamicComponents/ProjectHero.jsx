@@ -2,27 +2,12 @@ import Image from 'next/image';
 import { FiMapPin, FiSquare, FiCheckCircle, FiCalendar, FiDownload } from 'react-icons/fi';
 
 export default function ProjectHero({ project }) {
-
-  // const {
-  //   status = 'Ongoing',
-  //   name = 'Al Hind Green City',
-  //   description = 'Premium HMDA-approved plotted development in a fast-growing investment corridor.',
-  //   location = 'Shamshabad',
-  //   plotSize = '150–500 Sq. Yards',
-  //   approval = 'HMDA Approved',
-  //   bannerImage = 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000&auto=format&fit=crop',
-  //   priceLabel = 'Starting From',
-  //   price = '₹8,500 / Sq. Yard',
-  //   priceNote = 'Ready For Registration',
-  //   brochureUrl = '#',
-  // } = project || {};
-
   return (
-    <section className="relative w-full h-[65vh] min-h-[520px] overflow-hidden">
-      <div className="absolute inset-0">
+    <section className="relative w-full min-h-screen lg:min-h-0 lg:h-[65vh] lg:min-h-[520px]">
+      <div className="absolute inset-0 overflow-hidden">
         <Image
-          src='https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000&auto=format&fit=crop'
-          alt='dummy'
+          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000&auto=format&fit=crop"
+          alt="dummy"
           fill
           priority
           className="object-cover"
@@ -31,8 +16,8 @@ export default function ProjectHero({ project }) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/10" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 h-full flex items-center pt-20">
-        <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-10 w-full items-end lg:items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-10 min-h-screen lg:min-h-0 lg:h-full flex items-center pt-32 pb-12 lg:pt-20 lg:pb-0">
+        <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-10 w-full items-start lg:items-center">
           <div>
             <span className="inline-flex items-center gap-2 bg-[#C9A227] text-[#111111] text-[10px] font-semibold tracking-widest uppercase px-4 py-2 rounded-full mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#111111]" />
@@ -52,10 +37,6 @@ export default function ProjectHero({ project }) {
                 <FiMapPin className="text-[#C9A227]" size={16} />
                 {project.hero.location}
               </div>
-              {/* <div className="flex items-center gap-2 text-white/90 text-sm font-medium">
-                <FiSquare className="text-[#C9A227]" size={16} />
-                {project.hero.plotSize}
-              </div> */}
               <div className="flex items-center gap-2 text-white/90 text-sm font-medium">
                 <FiCheckCircle className="text-[#C9A227]" size={16} />
                 {project.hero.approval}
@@ -80,7 +61,7 @@ export default function ProjectHero({ project }) {
             </div>
           </div>
 
-          <div className="w-full max-w-xs lg:ml-auto lg:mb-0 mb-2">
+          <div className="w-full max-w-xs mt-8 lg:mt-0 lg:ml-auto">
             <div className="bg-black/50 backdrop-blur-md border border-[#C9A227]/30 rounded-lg p-7 sm:p-8">
               <p className="text-xs text-white/60 uppercase tracking-wider mb-3">
                 {project.hero.priceLabel}
