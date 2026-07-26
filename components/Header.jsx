@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -15,7 +16,6 @@ import {
   FiImage,
   FiMail,
 } from 'react-icons/fi';
-import { FaWhatsapp } from 'react-icons/fa';
 
 const navLinks = [
   { name: 'Home', href: '/', icon: FiHome },
@@ -49,9 +49,157 @@ const completedProjects = [
   { name: 'Falcon City Phase 4', href: '/completed/falcon-phase-4' },
 ];
 
+function MobileDrawer({ mobileOpen, setMobileOpen }) {
+  return createPortal(
+    <div
+      className={`lg:hidden fixed inset-0 z-[999] bg-[#0D0D0D] h-[100dvh] w-screen transition-opacity duration-300 ${
+        mobileOpen ? 'opacity-100 visible' : 'opacity-0 invisible pointer-events-none'
+      }`}
+    >
+      <div className="h-full flex flex-col">
+        <div className="flex items-center justify-between px-6 h-20 shrink-0 border-b border-white/10">
+          <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center">
+            <Image
+              src="/img/al-hind-logo-2.png"
+              alt="Al Hind Infra Logo"
+              width={50}
+              height={100}
+              className="object-contain"
+            />
+          </Link>
+          <button
+            onClick={() => setMobileOpen(false)}
+            className="text-[#C9A227]"
+            aria-label="Close menu"
+          >
+            <FiX size={26} />
+          </button>
+        </div>
+
+        <div className="flex-1 min-h-0 overflow-y-auto pt-6 pb-8 px-6">
+          <nav className="flex flex-col">
+            {navLinks.map(({ name, href, icon: Icon }) => (
+              <Link
+                key={name}
+                href={href}
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-4 py-4 border-b border-white/10 group"
+              >
+                <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0 group-hover:border-[#C9A227] transition-colors duration-300">
+                  <Icon className="text-[#C9A227]" size={17} />
+                </span>
+                <span className="text-lg font-serif text-white group-hover:text-[#C9A227] transition-colors duration-300">
+                  {name}
+                </span>
+              </Link>
+            ))}
+
+            <div className="border-b border-white/10 py-4">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0">
+                  <FiTrendingUp className="text-[#C9A227]" size={17} />
+                </span>
+                <Link
+                  href="/ongoing"
+                  onClick={() => setMobileOpen(false)}
+                  className="text-lg font-serif text-white hover:text-[#C9A227] transition-colors duration-300"
+                >
+                  Ongoing Projects
+                </Link>
+              </div>
+              <div className="pl-14 flex flex-col gap-0.5 max-h-40 overflow-y-auto">
+                {ongoingProjects.map((p) => (
+                  <Link
+                    key={p.name}
+                    href={p.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="py-2 text-sm text-white/50 hover:text-[#C9A227] transition-colors duration-300"
+                  >
+                    {p.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <div className="border-b border-white/10 py-4">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0">
+                  <FiCheckCircle className="text-[#C9A227]" size={17} />
+                </span>
+                <Link
+                  href="/completed"
+                  onClick={() => setMobileOpen(false)}
+                  className="text-lg font-serif text-white hover:text-[#C9A227] transition-colors duration-300"
+                >
+                  Completed Projects
+                </Link>
+              </div>
+              <div className="pl-14 flex flex-col gap-0.5 max-h-40 overflow-y-auto">
+                {completedProjects.map((p) => (
+                  <Link
+                    key={p.name}
+                    href={p.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="py-2 text-sm text-white/50 hover:text-[#C9A227] transition-colors duration-300"
+                  >
+                    {p.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            <Link
+              href="/gallery"
+              onClick={() => setMobileOpen(false)}
+              className="flex items-center gap-4 py-4 border-b border-white/10 group"
+            >
+              <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0 group-hover:border-[#C9A227] transition-colors duration-300">
+                <FiImage className="text-[#C9A227]" size={17} />
+              </span>
+              <span className="text-lg font-serif text-white group-hover:text-[#C9A227] transition-colors duration-300">
+                Gallery
+              </span>
+            </Link>
+
+            <Link
+              href="/contact"
+              onClick={() => setMobileOpen(false)}
+              className="flex items-center gap-4 py-4 border-b border-white/10 group"
+            >
+              <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0 group-hover:border-[#C9A227] transition-colors duration-300">
+                <FiMail className="text-[#C9A227]" size={17} />
+              </span>
+              <span className="text-lg font-serif text-white group-hover:text-[#C9A227] transition-colors duration-300">
+                Contact
+              </span>
+            </Link>
+          </nav>
+        </div>
+
+        <div className="px-6 pb-8 pt-4 border-t border-white/10 shrink-0">
+          <a
+            href="tel:+911234567890"
+            onClick={() => setMobileOpen(false)}
+            className="flex items-center justify-center gap-2 w-full bg-[#C9A227] hover:bg-[#A67C00] text-[#111111] text-sm font-semibold tracking-wide py-4 rounded-md transition-colors duration-300"
+          >
+            <FiPhone size={18} />
+            Call Now
+          </a>
+        </div>
+      </div>
+    </div>,
+    document.body
+  );
+}
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -78,14 +226,14 @@ export default function Header() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex flex-col leading-none shrink-0 z-[60]">
+          <Link href="/" className="flex flex-col leading-none shrink-0">
             <Image
-              src="/img/al-hind-logo.png"
+              src="/img/al-hind-logo-2.png"
               alt="Al Hind Infra Logo"
-              width={110}
+              width={50}
               height={100}
               priority
-              className="object-cover w-auto h-auto"
+              className="object-contain"
             />
           </Link>
 
@@ -161,7 +309,7 @@ export default function Header() {
           </nav>
 
           <div className="hidden lg:flex items-center gap-4">
-            <a
+          <a  
               href="tel:+911234567890"
               className="flex items-center gap-2 bg-[#C9A227] hover:bg-[#A67C00] text-white text-sm font-medium px-5 py-2.5 rounded-md transition-colors duration-300"
             >
@@ -172,7 +320,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileOpen((prev) => !prev)}
-            className={`lg:hidden z-[60] transition-colors duration-300 ${
+            className={`lg:hidden transition-colors duration-300 ${
               mobileOpen ? 'text-[#C9A227]' : linkColor
             }`}
             aria-label="Toggle menu"
@@ -182,131 +330,7 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Full-screen mobile drawer */}
-      <div
-        className={`lg:hidden fixed inset-0 z-50 bg-[#0D0D0D] transition-all duration-300 ${
-          mobileOpen
-            ? 'opacity-100 visible'
-            : 'opacity-0 invisible pointer-events-none'
-        }`}
-      >
-        <div
-          className={`h-full flex flex-col transition-transform duration-300 ${
-            mobileOpen ? 'translate-y-0' : '-translate-y-4'
-          }`}
-        >
-          <div className="flex-1 overflow-y-auto pt-28 pb-8 px-6">
-            <nav className="flex flex-col">
-              {navLinks.map(({ name, href, icon: Icon }) => (
-                <Link
-                  key={name}
-                  href={href}
-                  onClick={() => setMobileOpen(false)}
-                  className="flex items-center gap-4 py-4 border-b border-white/10 group"
-                >
-                  <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0 group-hover:border-[#C9A227] transition-colors duration-300">
-                    <Icon className="text-[#C9A227]" size={17} />
-                  </span>
-                  <span className="text-lg font-serif text-white group-hover:text-[#C9A227] transition-colors duration-300">
-                    {name}
-                  </span>
-                </Link>
-              ))}
-
-              <div className="border-b border-white/10 py-4">
-                <div className="flex items-center gap-4 mb-3">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0">
-                    <FiTrendingUp className="text-[#C9A227]" size={17} />
-                  </span>
-                  <Link
-                    href="/ongoing"
-                    onClick={() => setMobileOpen(false)}
-                    className="text-lg font-serif text-white hover:text-[#C9A227] transition-colors duration-300"
-                  >
-                    Ongoing Projects
-                  </Link>
-                </div>
-                <div className="pl-14 flex flex-col gap-0.5 max-h-40 overflow-y-auto">
-                  {ongoingProjects.map((p) => (
-                    <Link
-                      key={p.name}
-                      href={p.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="py-2 text-sm text-white/50 hover:text-[#C9A227] transition-colors duration-300"
-                    >
-                      {p.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              <div className="border-b border-white/10 py-4">
-                <div className="flex items-center gap-4 mb-3">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0">
-                    <FiCheckCircle className="text-[#C9A227]" size={17} />
-                  </span>
-                  <Link
-                    href="/completed"
-                    onClick={() => setMobileOpen(false)}
-                    className="text-lg font-serif text-white hover:text-[#C9A227] transition-colors duration-300"
-                  >
-                    Completed Projects
-                  </Link>
-                </div>
-                <div className="pl-14 flex flex-col gap-0.5 max-h-40 overflow-y-auto">
-                  {completedProjects.map((p) => (
-                    <Link
-                      key={p.name}
-                      href={p.href}
-                      onClick={() => setMobileOpen(false)}
-                      className="py-2 text-sm text-white/50 hover:text-[#C9A227] transition-colors duration-300"
-                    >
-                      {p.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
-              <Link
-                href="/gallery"
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-4 py-4 border-b border-white/10 group"
-              >
-                <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0 group-hover:border-[#C9A227] transition-colors duration-300">
-                  <FiImage className="text-[#C9A227]" size={17} />
-                </span>
-                <span className="text-lg font-serif text-white group-hover:text-[#C9A227] transition-colors duration-300">
-                  Gallery
-                </span>
-              </Link>
-
-              <Link
-                href="/contact"
-                onClick={() => setMobileOpen(false)}
-                className="flex items-center gap-4 py-4 border-b border-white/10 group"
-              >
-                <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0 group-hover:border-[#C9A227] transition-colors duration-300">
-                  <FiMail className="text-[#C9A227]" size={17} />
-                </span>
-                <span className="text-lg font-serif text-white group-hover:text-[#C9A227] transition-colors duration-300">
-                  Contact
-                </span>
-              </Link>
-            </nav>
-          </div>
-
-          <div className="px-6 pb-8 pt-4 border-t border-white/10">
-            <a
-              href="tel:+911234567890"
-              onClick={() => setMobileOpen(false)}
-              className="flex items-center justify-center gap-2 w-full bg-[#C9A227] hover:bg-[#A67C00] text-[#111111] text-sm font-semibold tracking-wide py-4 rounded-md transition-colors duration-300"
-            >
-              <FiPhone size={18} />
-              Call Now
-            </a>
-          </div>
-        </div>
-      </div>
+      {mounted && <MobileDrawer mobileOpen={mobileOpen} setMobileOpen={setMobileOpen} />}
     </header>
   );
 }
