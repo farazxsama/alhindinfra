@@ -2,13 +2,24 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Image from 'next/image'
-import { FiPhone, FiMenu, FiX, FiChevronDown } from 'react-icons/fi';
+import Image from 'next/image';
+import {
+  FiPhone,
+  FiMenu,
+  FiX,
+  FiChevronDown,
+  FiHome,
+  FiInfo,
+  FiTrendingUp,
+  FiCheckCircle,
+  FiImage,
+  FiMail,
+} from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 
 const navLinks = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
+  { name: 'Home', href: '/', icon: FiHome },
+  { name: 'About', href: '/about', icon: FiInfo },
 ];
 
 const ongoingProjects = [
@@ -17,7 +28,6 @@ const ongoingProjects = [
   { name: 'Global City Phase 1', href: '/ongoing/global-city' },
   { name: 'Global City Phase 2', href: '/ongoing/global-2' },
   { name: 'Regional City', href: '/ongoing/regional-city' },
-
 ];
 
 const completedProjects = [
@@ -50,16 +60,25 @@ export default function Header() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  const linkColor = scrolled ? 'text-[#111111]' : 'text-white';
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileOpen]);
+
+  const isSolid = scrolled || mobileOpen;
+  const linkColor = isSolid ? 'text-[#111111]' : 'text-white';
 
   return (
     <header
-      className={`fixed  top-0 left-0 w-full z-50 transition-colors duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
-        }`}
+      className={`fixed top-0 left-0 w-full z-50 transition-colors duration-300 ${
+        isSolid ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
+      }`}
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-10">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex flex-col leading-none shrink-0">
+          <Link href="/" className="flex flex-col leading-none shrink-0 z-[60]">
             <Image
               src="/img/al-hind-logo.png"
               alt="Al Hind Infra Logo"
@@ -68,7 +87,6 @@ export default function Header() {
               priority
               className="object-cover w-auto h-auto"
             />
-
           </Link>
 
           <nav className="hidden lg:flex items-center gap-10">
@@ -154,7 +172,9 @@ export default function Header() {
 
           <button
             onClick={() => setMobileOpen((prev) => !prev)}
-            className={`lg:hidden transition-colors duration-300 ${linkColor}`}
+            className={`lg:hidden z-[60] transition-colors duration-300 ${
+              mobileOpen ? 'text-[#C9A227]' : linkColor
+            }`}
             aria-label="Toggle menu"
           >
             {mobileOpen ? <FiX size={26} /> : <FiMenu size={26} />}
@@ -162,99 +182,131 @@ export default function Header() {
         </div>
       </div>
 
-      {mobileOpen && (
-        <div className="lg:hidden bg-white border-t border-[#E5E7EB] max-h-[80vh] overflow-y-auto">
-          <div className="px-6 py-6 flex flex-col">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                onClick={() => setMobileOpen(false)}
-                className="py-3 text-sm font-medium text-[#111111] border-b border-[#E5E7EB]"
-              >
-                {link.name}
-              </Link>
-            ))}
+      {/* Full-screen mobile drawer */}
+      <div
+        className={`lg:hidden fixed inset-0 z-50 bg-[#0D0D0D] transition-all duration-300 ${
+          mobileOpen
+            ? 'opacity-100 visible'
+            : 'opacity-0 invisible pointer-events-none'
+        }`}
+      >
+        <div
+          className={`h-full flex flex-col transition-transform duration-300 ${
+            mobileOpen ? 'translate-y-0' : '-translate-y-4'
+          }`}
+        >
+          <div className="flex-1 overflow-y-auto pt-28 pb-8 px-6">
+            <nav className="flex flex-col">
+              {navLinks.map(({ name, href, icon: Icon }) => (
+                <Link
+                  key={name}
+                  href={href}
+                  onClick={() => setMobileOpen(false)}
+                  className="flex items-center gap-4 py-4 border-b border-white/10 group"
+                >
+                  <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0 group-hover:border-[#C9A227] transition-colors duration-300">
+                    <Icon className="text-[#C9A227]" size={17} />
+                  </span>
+                  <span className="text-lg font-serif text-white group-hover:text-[#C9A227] transition-colors duration-300">
+                    {name}
+                  </span>
+                </Link>
+              ))}
 
-            <div className="border-b border-[#E5E7EB] py-3">
-              <Link
-                href="/ongoing"
-                onClick={() => setMobileOpen(false)}
-                className="text-sm font-medium text-[#111111]"
-              >
-                Ongoing Projects
-              </Link>
-              <div className="pt-2 pl-4 flex flex-col max-h-56 overflow-y-auto">
-                {ongoingProjects.map((p) => (
+              <div className="border-b border-white/10 py-4">
+                <div className="flex items-center gap-4 mb-3">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0">
+                    <FiTrendingUp className="text-[#C9A227]" size={17} />
+                  </span>
                   <Link
-                    key={p.name}
-                    href={p.href}
+                    href="/ongoing"
                     onClick={() => setMobileOpen(false)}
-                    className="py-2 text-sm text-[#6B7280] hover:text-[#C9A227]"
+                    className="text-lg font-serif text-white hover:text-[#C9A227] transition-colors duration-300"
                   >
-                    {p.name}
+                    Ongoing Projects
                   </Link>
-                ))}
+                </div>
+                <div className="pl-14 flex flex-col gap-0.5 max-h-40 overflow-y-auto">
+                  {ongoingProjects.map((p) => (
+                    <Link
+                      key={p.name}
+                      href={p.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="py-2 text-sm text-white/50 hover:text-[#C9A227] transition-colors duration-300"
+                    >
+                      {p.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <div className="border-b border-[#E5E7EB] py-3">
-              <Link
-                href="/completed"
-                onClick={() => setMobileOpen(false)}
-                className="text-sm font-medium text-[#111111]"
-              >
-                Completed Projects
-              </Link>
-              <div className="pt-2 pl-4 flex flex-col max-h-56 overflow-y-auto">
-                {completedProjects.map((p) => (
+              <div className="border-b border-white/10 py-4">
+                <div className="flex items-center gap-4 mb-3">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0">
+                    <FiCheckCircle className="text-[#C9A227]" size={17} />
+                  </span>
                   <Link
-                    key={p.name}
-                    href={p.href}
+                    href="/completed"
                     onClick={() => setMobileOpen(false)}
-                    className="py-2 text-sm text-[#6B7280] hover:text-[#C9A227]"
+                    className="text-lg font-serif text-white hover:text-[#C9A227] transition-colors duration-300"
                   >
-                    {p.name}
+                    Completed Projects
                   </Link>
-                ))}
+                </div>
+                <div className="pl-14 flex flex-col gap-0.5 max-h-40 overflow-y-auto">
+                  {completedProjects.map((p) => (
+                    <Link
+                      key={p.name}
+                      href={p.href}
+                      onClick={() => setMobileOpen(false)}
+                      className="py-2 text-sm text-white/50 hover:text-[#C9A227] transition-colors duration-300"
+                    >
+                      {p.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <Link
-              href="/gallery"
-              onClick={() => setMobileOpen(false)}
-              className="py-3 text-sm font-medium text-[#111111] border-b border-[#E5E7EB]"
-            >
-              Gallery
-            </Link>
-            <Link
-              href="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="py-3 text-sm font-medium text-[#111111] border-b border-[#E5E7EB]"
-            >
-              Contact
-            </Link>
+              <Link
+                href="/gallery"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-4 py-4 border-b border-white/10 group"
+              >
+                <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0 group-hover:border-[#C9A227] transition-colors duration-300">
+                  <FiImage className="text-[#C9A227]" size={17} />
+                </span>
+                <span className="text-lg font-serif text-white group-hover:text-[#C9A227] transition-colors duration-300">
+                  Gallery
+                </span>
+              </Link>
 
-            <div className="flex items-center gap-3 mt-5">
-              <a
-                href="tel:+911234567890"
-                className="flex-1 flex items-center justify-center gap-2 bg-[#C9A227] hover:bg-[#A67C00] text-white text-sm font-medium px-5 py-3 rounded-md transition-colors duration-300"
+              <Link
+                href="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="flex items-center gap-4 py-4 border-b border-white/10 group"
               >
-                <FiPhone size={16} />
-                Call Now
-              </a>
-              <a
-                href="https://wa.me/911234567890"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-12 h-12 rounded-md border border-[#E5E7EB] text-[#111111] hover:border-[#C9A227] hover:text-[#C9A227] transition-colors duration-300"
-              >
-                <FaWhatsapp size={20} />
-              </a>
-            </div>
+                <span className="flex items-center justify-center w-10 h-10 rounded-md bg-white/5 border border-white/10 shrink-0 group-hover:border-[#C9A227] transition-colors duration-300">
+                  <FiMail className="text-[#C9A227]" size={17} />
+                </span>
+                <span className="text-lg font-serif text-white group-hover:text-[#C9A227] transition-colors duration-300">
+                  Contact
+                </span>
+              </Link>
+            </nav>
+          </div>
+
+          <div className="px-6 pb-8 pt-4 border-t border-white/10">
+            <a
+              href="tel:+911234567890"
+              onClick={() => setMobileOpen(false)}
+              className="flex items-center justify-center gap-2 w-full bg-[#C9A227] hover:bg-[#A67C00] text-[#111111] text-sm font-semibold tracking-wide py-4 rounded-md transition-colors duration-300"
+            >
+              <FiPhone size={18} />
+              Call Now
+            </a>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }
