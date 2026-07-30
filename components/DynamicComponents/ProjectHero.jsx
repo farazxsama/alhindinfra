@@ -6,8 +6,8 @@ export default function ProjectHero({ project }) {
     <section className="relative w-full min-h-screen lg:min-h-0 lg:h-[65vh] lg:min-h-[520px]">
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2000&auto=format&fit=crop"
-          alt="dummy"
+          src={project.hero.bannerImage}
+          alt={project.name}
           fill
           priority
           className="object-cover"
