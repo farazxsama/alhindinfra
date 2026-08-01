@@ -45,19 +45,19 @@ export default function ProjectHero({ project }) {
 
             <div className="flex flex-wrap items-center gap-4">
               <a
-                href="#enquiry"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#A67C00] text-[#111111] text-sm font-semibold tracking-wide px-8 py-4 rounded-md transition-colors duration-300"
               >
                 <FiCalendar size={16} />
                 Book Site Visit
               </a>
-              <a
+              {/* <a
                 href={project.hero.brochureUrl}
                 className="inline-flex items-center gap-2 bg-black/30 border border-white/40 hover:border-[#C9A227] hover:text-[#C9A227] text-white text-sm font-semibold tracking-wide px-8 py-4 rounded-md transition-colors duration-300"
               >
                 <FiDownload size={16} />
                 Download Brochure
-              </a>
+              </a> */}
             </div>
           </div>
 

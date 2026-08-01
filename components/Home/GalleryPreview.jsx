@@ -4,50 +4,41 @@ import { FiArrowRight } from 'react-icons/fi';
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1200&auto=format&fit=crop',
-    alt: 'Residential towers at dusk',
+    src: '/img/ongoing/hilltop-city-phase-1/hilltop1-aerial.jpg',
+    alt: 'Aerial view of plotted development',
     className: 'col-span-2 row-span-2',
   },
   {
-    src: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=800&auto=format&fit=crop',
-    alt: 'High-rise apartment exterior',
+    src: '/img/ongoing/hilltop-city-phase-1/hilltop1-road.jpg',
+    alt: 'Site view of open plots',
     className: 'col-span-1 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=800&auto=format&fit=crop',
-    alt: 'Villa entrance',
+    src: '/img/completed/regional-city/regional-sunset.jpg',
+    alt: 'Site view of open plots',
     className: 'col-span-1 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=800&auto=format&fit=crop',
-    alt: 'Landscaped villa garden',
+    src: '/img/completed/regional-city/regional-tree.jpg',
+    alt: 'Site view of open plots',
     className: 'col-span-1 row-span-2',
   },
   {
-    src: 'https://images.unsplash.com/photo-1512918728675-ed5a9ecdebfd?q=80&w=800&auto=format&fit=crop',
-    alt: 'Modern living room interior',
+    src: '/img/ongoing/global-city-phase-1/global-city-5.jpg',
+    alt: 'Drone view of landscaped township',
     className: 'col-span-1 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1560184897-ae75f418493e?q=80&w=1200&auto=format&fit=crop',
-    alt: 'Gated community street',
+    src: '/img/completed/imperial-city/imperial-1.jpg',
+    alt: 'Drone view of landscaped township',
     className: 'col-span-2 row-span-1',
   },
   {
-    src: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop',
-    alt: 'Apartment balcony view',
+    src: '/img/ongoing/hilltop-city-phase-1/hilltop1-road.jpg',
+    alt: 'Wide site view of development',
     className: 'col-span-1 row-span-1',
   },
-  {
-    src: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=800&auto=format&fit=crop',
-    alt: 'Township road view',
-    className: 'col-span-1 row-span-1',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1493397212122-2b85dda8106b?q=80&w=800&auto=format&fit=crop',
-    alt: 'Premium residence at night',
-    className: 'col-span-1 row-span-1',
-  },
+ 
 ];
 
 export default function GalleryPreview() {

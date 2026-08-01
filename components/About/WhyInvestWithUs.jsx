@@ -66,7 +66,7 @@ export default function WhyInvestWithUs() {
 
                 <div className="flex justify-center">
                     <Link
-                        href="/ongoing-projects"
+                        href="/ongoing"
                         className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#A67C00] text-[#111111] text-sm font-semibold tracking-wide px-8 py-4 rounded-md transition-colors duration-300"
                     >
                         Explore Our Projects

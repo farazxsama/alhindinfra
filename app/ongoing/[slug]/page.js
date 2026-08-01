@@ -36,7 +36,7 @@ export default async function Page({ params }) {
       <QuickProjectInfo project={project} />
       <AboutProject project={project}/>
       <ProjectFeatures project={project}/>
-      <LocationConnectivity project={project}/>
+      {/* <LocationConnectivity project={project}/> */}
       <ProjectGallery project={project}/>
       <RelatedProjects project={project} type="ongoing"/>
     </>

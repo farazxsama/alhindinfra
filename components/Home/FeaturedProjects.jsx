@@ -7,66 +7,66 @@ import { FiMapPin, FiArrowRight } from 'react-icons/fi';
 
 const ongoingProjects = [
   {
-    id: 'al-hind-city',
-    name: 'Al Hind City',
-    location: 'Shamshabad, Hyderabad',
+    id: 'hilltop-1',
+    name: 'HillTop City Phase 1',
+    location: 'Mariyapur Village, Shabad',
     description:
-      'A landmark township offering spacious plots and villas amid green, open landscapes.',
+      'HillTop City Phase I is one of the latest residential projects launched by Al Hind Infra. It is located in the Shabad vicinity.',
     image:
-      'https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=900&auto=format&fit=crop',
+      '/img/ongoing/hilltop-city-phase-1/hilltop1-aerial.jpg',
     status: 'Ongoing',
   },
   {
-    id: 'al-hind-enclave',
-    name: 'Al Hind Enclave',
-    location: 'Shamshabad, Hyderabad',
+    id: 'hilltop-3',
+    name: 'HillTop City Phase 3',
+    location: 'Mariyapur Village, Shabad',
     description:
-      'Premium residential apartments designed for modern families with world-class amenities.',
+      'HillTop City Phase III is one of the latest residential projects launched by Al Hind Infra. It is located in the Shabad vicinity.',
     image:
-      'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=900&auto=format&fit=crop',
+      '/img/ongoing/hill-city-phase-3/hilltop3-1.jpg',
     status: 'Ongoing',
   },
   {
-    id: 'al-hind-heights',
-    name: 'Al Hind Heights',
-    location: 'Kollur, Hyderabad',
+    id: 'global-city',
+    name: 'Global City Phase 1',
+    location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'High-rise residences with panoramic views, curated for a refined urban lifestyle.',
+      'Al Hind Infra presents their latest project - Global City Phase 1. This brand-new project offers you attractive, highway-facing plots for sale.',
     image:
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=900&auto=format&fit=crop',
+      '/img/ongoing/global-city-phase-1/global-city-1.jpg',
     status: 'Ongoing',
   },
 ];
 
 const completedProjects = [
   {
-    id: 'al-hind-residency',
-    name: 'Al Hind Residency',
-    location: 'Shamshabad, Hyderabad',
+    id: 'imperial-city',
+    name: 'Imperial City',
+    location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'A fully delivered residential community known for timely handover and lasting quality.',
+      'Rs 6000 /- Per Sq. Yard with EMI | Gated Community Plot for Sale | Ten Years of Security',
     image:
-      'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/imperial-city/imperial-1.jpg',
     status: 'Completed',
   },
   {
-    id: 'golden-meadows',
-    name: 'Golden Meadows',
-    location: 'Adibatla, Hyderabad',
+    id: 'crystal-city',
+    name: 'Crystal City Project',
+    location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'Independent villas set across landscaped grounds, completed and fully occupied.',
+      'Al Hind Infra proudly presents its latest venture "Crystal City".',
     image:
-      'https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/crystal-city/highway-city-new.jpg',
     status: 'Completed',
   },
   {
-    id: 'royal-enclave',
-    name: 'Royal Enclave',
-    location: 'Maheshwaram, Hyderabad',
+    id: 'hilton-city',
+    name: 'Hilton City',
+    location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'A gated community offering premium plots, delivered on schedule with clear titles.',
+      'We bring you safe and secure plots near Shamshabad, an excellent investment opportunity for your future.',
     image:
-      'https://images.unsplash.com/photo-1560184897-ae75f418493e?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/hilton-city/hilton-city-2.jpg',
     status: 'Completed',
   },
 ];
@@ -84,11 +84,10 @@ function ProjectCard({ project }) {
           className="object-cover"
         />
         <span
-          className={`absolute top-4 left-4 text-[10px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full ${
-            isOngoing
+          className={`absolute top-4 left-4 text-[10px] font-semibold tracking-widest uppercase px-3 py-1.5 rounded-full ${isOngoing
               ? 'bg-[#C9A227] text-[#111111]'
               : 'bg-[#111111] text-white'
-          }`}
+            }`}
         >
           {project.status}
         </span>
@@ -106,7 +105,7 @@ function ProjectCard({ project }) {
           {project.description}
         </p>
         <Link
-          href={`/${isOngoing ? 'ongoing-projects' : 'completed-projects'}/${project.id}`}
+          href={`/${isOngoing ? 'ongoing' : 'completed'}/${project.id}`}
           className="inline-flex items-center gap-2 text-sm font-semibold text-[#C9A227] hover:text-[#A67C00] transition-colors duration-300"
         >
           View Details
@@ -138,21 +137,19 @@ export default function FeaturedProjects() {
           <div className="inline-flex bg-[#F8F8F6] border border-[#E5E7EB] rounded-md p-1 self-start">
             <button
               onClick={() => setActiveTab('ongoing')}
-              className={`px-6 py-2.5 text-sm font-medium rounded-md transition-colors duration-300 ${
-                activeTab === 'ongoing'
+              className={`px-6 py-2.5 text-sm font-medium rounded-md transition-colors duration-300 ${activeTab === 'ongoing'
                   ? 'bg-[#C9A227] text-[#111111]'
                   : 'text-[#6B7280] hover:text-[#1A1A1A]'
-              }`}
+                }`}
             >
               Ongoing Projects
             </button>
             <button
               onClick={() => setActiveTab('completed')}
-              className={`px-6 py-2.5 text-sm font-medium rounded-md transition-colors duration-300 ${
-                activeTab === 'completed'
+              className={`px-6 py-2.5 text-sm font-medium rounded-md transition-colors duration-300 ${activeTab === 'completed'
                   ? 'bg-[#C9A227] text-[#111111]'
                   : 'text-[#6B7280] hover:text-[#1A1A1A]'
-              }`}
+                }`}
             >
               Completed Projects
             </button>
@@ -167,7 +164,10 @@ export default function FeaturedProjects() {
 
         <div className="flex justify-center mt-14">
           <Link
-            href="/ongoing-projects"
+            href={activeTab === 'completed'
+                  ? '/completed'
+                  : '/ongoing'
+                }
             className="inline-flex items-center gap-2 border border-[#111111] hover:bg-[#111111] hover:text-white text-[#111111] text-sm font-semibold tracking-wide px-8 py-4 rounded-md transition-colors duration-300"
           >
             View All Projects

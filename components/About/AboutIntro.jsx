@@ -9,10 +9,10 @@ export default function AboutIntro() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-16 items-center">
                     <div className="relative w-full aspect-[4/5] sm:aspect-[4/4] lg:aspect-[5/6] rounded-lg overflow-hidden shadow-xl">
                         <Image
-                            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1400&auto=format&fit=crop"
-                            alt="Al Hind Infra corporate office and premium development"
+                            src="/img/al-hind-logo-2.png"
+                            alt="Al Hind Infra Logo"
                             fill
-                            className="object-cover"
+                            className="object-contain"
                         />
                     </div>
 
@@ -68,7 +68,7 @@ export default function AboutIntro() {
                         </div>
 
                         <Link
-                            href="/ongoing-projects"
+                            href="/ongoing"
                             className="inline-flex items-center gap-2 bg-[#C9A227] hover:bg-[#A67C00] text-[#111111] text-sm font-semibold tracking-wide px-8 py-4 rounded-md transition-colors duration-300"
                         >
                             Explore Projects

@@ -3,58 +3,75 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-const categories = ['All', 'Site Views', 'Layouts', 'Roads', 'Amenities', 'Drone Views'];
+const categories = ['All', 'Site Views', 'Drone Views'];
 
 const galleryImages = [
   {
-    src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=1400&auto=format&fit=crop',
+    src: '/img/ongoing/hilltop-city-phase-1/hilltop1-aerial.jpg',
     alt: 'Aerial view of plotted development',
     category: 'Drone Views',
   },
   {
-    src: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=900&auto=format&fit=crop',
-    alt: 'Internal road network',
-    category: 'Roads',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=900&auto=format&fit=crop',
-    alt: 'Landscaped entrance arch',
-    category: 'Amenities',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
-    alt: 'Marked residential plot layout',
-    category: 'Layouts',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=900&auto=format&fit=crop',
+    src: '/img/ongoing/hilltop-city-phase-1/hilltop1-road.jpg',
     alt: 'Site view of open plots',
     category: 'Site Views',
   },
   {
-    src: 'https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?q=80&w=900&auto=format&fit=crop',
-    alt: 'Paved road with street lighting',
-    category: 'Roads',
+    src: '/img/completed/regional-city/regional-sunset.jpg',
+    alt: 'Site view of open plots',
+    category: 'Site Views',
   },
   {
-    src: 'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=900&auto=format&fit=crop',
-    alt: 'Compound wall and entrance gate',
-    category: 'Amenities',
+    src: '/img/completed/regional-city/regional-tree.jpg',
+    alt: 'Site view of open plots',
+    category: 'Site Views',
   },
-  {
-    src: 'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
-    alt: 'Layout plan markers on site',
-    category: 'Layouts',
+   {
+    src: '/img/ongoing/global-city-phase-1/global-city-5.jpg',
+    alt: 'Drone view of landscaped township',
+    category: 'Drone Views',
   },
+   {
+    src: '/img/completed/imperial-city/imperial-1.jpg',
+    alt: 'Drone view of landscaped township',
+    category: 'Drone Views',
+  },
+  
   {
-    src: 'https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=900&auto=format&fit=crop',
+    src: '/img/ongoing/hilltop-city-phase-1/hilltop1-road.jpg',
     alt: 'Wide site view of development',
     category: 'Site Views',
   },
   {
-    src: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1400&auto=format&fit=crop',
+    src: '/img/ongoing/hill-city-phase-3/hilltop3-1.jpg',
+    alt: 'Wide site view of development',
+    category: 'Site Views',
+  },
+  
+   {
+    src: '/img/completed/imperial-city/imperial-2.jpg',
     alt: 'Drone view of landscaped township',
     category: 'Drone Views',
+  },
+  {
+    src: '/img/completed/imperial-city/imperial-3.jpg',
+    alt: 'Drone view of landscaped township',
+    category: 'Drone Views',
+  },
+  {
+    src: '/img/completed/imperial-city/imperial-6.jpg',
+    alt: 'Drone view of landscaped township',
+    category: 'Drone Views',
+  },
+  {
+    src: '/img/ongoing/hill-city-phase-3/hilltop3-5.jpg',
+    alt: 'Wide site view of development',
+    category: 'Site Views',
+  },
+  {
+    src: '/img/ongoing/global-city-phase-1/global-city-3.jpg',
+    alt: 'Wide site view of development',
+    category: 'Site Views',
   },
 ];
 
@@ -93,10 +110,7 @@ export default function GalleryShowcase() {
             Reflect Our Commitment
           </h2>
           <p className="text-[#6B7280] text-base leading-relaxed max-w-2xl">
-            Browse through images of our plotted developments, site
-            infrastructure, road networks, landscaped surroundings, and
-            project highlights that showcase the quality and planning
-            behind every layout.
+            Browse images of our premium plotted developments, well-planned layouts, and project highlights.
           </p>
         </div>
 

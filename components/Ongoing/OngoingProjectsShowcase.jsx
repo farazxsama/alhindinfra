@@ -8,9 +8,9 @@ const ongoingProjects = [
     name: 'HillTop City Phase 1',
     location: 'Mariyapur Village, Shabad',
     description:
-      'HillTop City Phase I is one of the latest residential projects launched by Hindustan Townships. It is located in the Shabad vicinity.',
+      'HillTop City Phase I is one of the latest residential projects launched by Al Hind Infra. It is located in the Shabad vicinity.',
     image:
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=900&auto=format&fit=crop',
+      '/img/ongoing/hilltop-city-phase-1/hilltop1-site.jpg',
     highlights: ['HMDA Approved', 'Ready for Registration', 'Prime Location'],
   },
   {
@@ -18,9 +18,9 @@ const ongoingProjects = [
     name: 'HillTop City Phase 3',
     location: 'Mariyapur Village, Shabad',
     description:
-      'HillTop City Phase III is one of the latest residential projects launched by Hindustan Townships. It is located in the Shabad vicinity.',
+      'HillTop City Phase III is one of the latest residential projects launched by Al Hind Infra. It is located in the Shabad vicinity.',
     image:
-      'https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=900&auto=format&fit=crop',
+      '/img/ongoing/hill-city-phase-3/hilltop3-3.jpg',
     highlights: ['RERA Registered', 'Gated Layout', 'Excellent Connectivity'],
   },
   {
@@ -28,9 +28,9 @@ const ongoingProjects = [
     name: 'Global City Phase 1',
     location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'Hindustan Townships presents their latest project - Global City Phase 1. This brand-new project offers you attractive, highway-facing plots for sale.',
+      'Al Hind Infra presents their latest project - Global City Phase 1. This brand-new project offers you attractive, highway-facing plots for sale.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/ongoing/global-city-phase-1/global-city-1.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -38,9 +38,9 @@ const ongoingProjects = [
     name: 'Global City Phase 2',
     location: 'Nagarkunta Village, Shabad',
     description:
-      'Hindustan Townships India presents their latest project - Global City Phase 2. This brand-new project offers you attractive, highway-facing plots for sale.',
+      'Al Hind Infra India presents their latest project - Global City Phase 2. This brand-new project offers you attractive, highway-facing plots for sale.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/ongoing/global-city-phase-2/global2-site1.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -48,9 +48,9 @@ const ongoingProjects = [
     name: 'Regional City',
     location: 'Manmarri Village, Shabad',
     description:
-      'Regional City is a premium residential venture by Hindustan Townships, strategically located in Shabad Mandal near the upcoming Regional Ring Road (RRR).',
+      'Regional City is a premium residential venture by Al Hind Infra, strategically located in Shabad Mandal near the upcoming Regional Ring Road (RRR).',
     image:
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=900&auto=format&fit=crop',
+      '/img/ongoing/regional-city/regional-sunset.jpg',
     highlights: ['HMDA Approved', 'Ready for Registration', 'Prime Location'],
   },
  

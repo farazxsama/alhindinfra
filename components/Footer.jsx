@@ -5,7 +5,7 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaCity } from 'react
 
 const companyLinks = [
     { name: 'About', href: '/about' },
-    { name: 'Projects', href: '/ongoing-projects' },
+    // { name: 'Projects', href: '/ongoing-projects' },
     { name: 'Gallery', href: '/gallery' },
     { name: 'Contact', href: '/contact' },
 ];
@@ -143,13 +143,13 @@ export default function Footer() {
                         >
                             Privacy Policy
                         </Link>
-                        <span className="text-white/20">|</span>
-                        <Link
+                        {/* <span className="text-white/20">|</span> */}
+                        {/* <Link
                             href="/terms-and-conditions"
                             className="hover:text-[#C9A227] transition-colors duration-300"
                         >
                             Terms & Conditions
-                        </Link>
+                        </Link> */}
                     </div>
                 </div>
             </div>

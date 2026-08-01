@@ -10,7 +10,7 @@ const completedProjects = [
     description:
       'Rs 6000 /- Per Sq. Yard with EMI | Gated Community Plot for Sale | Ten Years of Security',
     image:
-      'https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/imperial-city/imperial-1.jpg',
     highlights: ['HMDA Approved', 'Ready for Registration', 'Prime Location'],
   },
   {
@@ -18,9 +18,9 @@ const completedProjects = [
     name: 'Crystal City Project',
     location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'Hindustan Townships proudly presents its latest venture "Crystal City".',
+      'Al Hind Infra proudly presents its latest venture "Crystal City".',
     image:
-      'https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/crystal-city/highway-city-new.jpg',
     highlights: ['RERA Registered', 'Gated Layout', 'Excellent Connectivity'],
   },
   {
@@ -30,7 +30,7 @@ const completedProjects = [
     description:
       'We bring you safe and secure plots near Shamshabad, an excellent investment opportunity for your future.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/hilton-city/hilton-city-4.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -38,9 +38,9 @@ const completedProjects = [
     name: 'Express City',
     location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'Hindustan Townships presents their latest project - Express City. This project offers you attractive, highway-facing residential plots for sale.',
+      'Al Hind Infra presents their latest project - Express City. This project offers you attractive, highway-facing residential plots for sale.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/express-city/express-1.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -50,7 +50,7 @@ const completedProjects = [
     description:
       'Gated Community Plots for Sale Near Shamshabad with Ten Years of Security at just Rs 5,500/- Per Sq. for Residential and 8,000/- Per Sq. for Commercial',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/highway-city/highway-city-2.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -58,9 +58,9 @@ const completedProjects = [
     name: 'Highway City Phase 2',
     location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'Hindustan Townships India presents their latest project - Highway City Phase 2. This brand new project offers you attractive, highway-facing plots for sale.',
+      'Al Hind Infra India presents their latest project - Highway City Phase 2. This brand new project offers you attractive, highway-facing plots for sale.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/highway-city-phase-2/highway2-1.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -70,7 +70,7 @@ const completedProjects = [
     description:
       'Rs 4000 Per Sq. Yard with EMI | Gated Community Plot for Sale Near Shamshabad | Ten Years of Security',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/silver-city/silver-2.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -80,7 +80,7 @@ const completedProjects = [
     description:
       'Plots for Sale Near Shamshabad @ Rs 4500/- Sq. Yard. In a Gated Community with Clear Title & Spot Registration, Ten Years of Security, 100% Vaastu, Link Documents Available.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/future-city/future-city-3.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -88,9 +88,9 @@ const completedProjects = [
     name: 'Pearl City',
     location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'Hindustan Townships India brings to you their latest project - Pearl City',
+      'Al Hind Infra India brings to you their latest project - Pearl City',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/pearl-city/pearl-city-1.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -100,7 +100,7 @@ const completedProjects = [
     description:
       'Plot for sale in near Shamshabad @ Rs 4500/ Square Yard in a Gated Community, Clear Title and Spot Registration with link Documents Available, Ten years of security. 100% Vaastu.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/peace-city/peace-city-1.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -108,9 +108,9 @@ const completedProjects = [
     name: 'Prime City',
     location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'Hindustan Townships India presents their latest project - Prime City. This brand-new project offers you attractive, highway-facing residential plots for sale.',
+      'Al Hind Infra India presents their latest project - Prime City. This brand-new project offers you attractive, highway-facing residential plots for sale.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/prime-city-phase-1-2/prime-city-5.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -120,7 +120,7 @@ const completedProjects = [
     description:
       'Plots for Sale Near Shamshabad @ Rs 7,500/ Sq. Yard. In a Gated Community with Clear Title & Spot Registration. Ten Years of Security. 100% Vaastu.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/falcon-city-phase-1-2-3/express-3.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -128,9 +128,9 @@ const completedProjects = [
     name: 'Dream Home',
     location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'Hindustan Townships presents their latest project - Dream Home City. This brand-new project offers you attractive, highway-facing residential plots.',
+      'Al Hind Infra presents their latest project - Dream Home City. This brand-new project offers you attractive, highway-facing residential plots.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/dream-home-city/dream-home-1.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -138,9 +138,9 @@ const completedProjects = [
     name: 'Regional City',
     location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'Regional City is a premium residential venture by Hindustan Townships, strategically located in Shabad Mandal near the upcoming Regional Ring Road (RRR).',
+      'Regional City is a premium residential venture by Al Hind Infra, strategically located in Shabad Mandal near the upcoming Regional Ring Road (RRR).',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/regional-city/regional-boundary.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -148,9 +148,9 @@ const completedProjects = [
     name: 'Natural City',
     location: 'Shabad Mandal, Near Shamshabad',
     description:
-      'Natural City is one of the latest projects launched by Hindustan Townships.',
+      'Natural City is one of the latest projects launched by Al Hind Infra.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/natural-city/natural-city-3.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   {
@@ -160,7 +160,7 @@ const completedProjects = [
     description:
       'Plots for Sale Near Shamshabad @ Rs 9,500/ Sq. Yard. In a Gated Community with Clear Title & Spot Registration.',
     image:
-      'https://images.unsplash.com/photo-1628624747186-a941c476b7ef?q=80&w=900&auto=format&fit=crop',
+      '/img/completed/falcon-city-phase-4/falcon-city-1.jpg',
     highlights: ['HMDA Approved', 'Clear Titles', 'Gated Community'],
   },
   
