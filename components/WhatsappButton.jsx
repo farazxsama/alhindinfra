@@ -38,9 +38,9 @@ export default function WhatsAppButton() {
         }}
       >
         {/* Ping ring */}
-        {/* <span className="absolute inset-0 rounded-full animate-ping"
+        <span className="absolute inset-0 rounded-full animate-ping"
           style={{ background: "rgba(37,211,102,0.30)" }}
-        /> */}
+        />
         <RiWhatsappLine className="relative z-10 text-white text-3xl" />
       </div>
     </a>
