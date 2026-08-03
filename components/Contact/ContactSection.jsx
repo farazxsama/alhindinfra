@@ -8,20 +8,20 @@ const contactDetails = [
     {
         icon: FiPhone,
         label: 'Phone',
-        value: '+91 98765 43210',
-        href: 'tel:+919876543210',
+        value: '+91 93910 00156',
+        href: 'tel:+919391000156',
     },
     {
         icon: FiMail,
         label: 'Email',
-        value: 'info@alhindinfra.com',
-        href: 'mailto:info@alhindinfra.com',
+        value: 'alhindinfrasale@gmail.com',
+        href: 'mailto:alhindinfrasale@gmail.com',
     },
     {
         icon: FiMapPin,
         label: 'Office Address',
-        value: 'Plot No. 24, Financial District, Shamshabad, Hyderabad, Telangana',
-        href: null,
+        value: '12-2-728/2/105, Rethibowli, Pillar No 43, Opposite Indian Oil Petrol Pump, Srinivasa Plaza, Hyderabad, Telangana, 500028',
+        href: 'https://maps.app.goo.gl/XPpxay4f48ma4UuAA',
     },
 ];
 
@@ -73,7 +73,7 @@ export default function ContactSection() {
                         </div>
 
                         <a
-                            href="https://maps.google.com"
+                            href="https://maps.app.goo.gl/XPpxay4f48ma4UuAA"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 border border-[#111111] hover:bg-[#111111] hover:text-white text-[#111111] text-sm font-semibold tracking-wide px-7 py-3.5 rounded-md transition-colors duration-300"
@@ -83,20 +83,17 @@ export default function ContactSection() {
                         </a>
                     </div>
 
-                    <div className="relative bg-[#111111] rounded-lg p-10 sm:p-12 flex flex-col justify-center overflow-hidden">
-                        <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full border border-[#C9A227]/20" />
-                        <div className="absolute -bottom-20 -left-10 w-48 h-48 rounded-full border border-[#C9A227]/10" />
-
+            
                         <div>
                             <EnquiryForm
                                 variant="dark"
-                                title="Send Us a Message"
-                                buttonText="Submit Enquiry"
+                                title="Book a Free Site Visit"
+                                buttonText="Submit"
                                 note="Our team will contact you within 24 hours."
                             />
                         </div>
 
-                    </div>
+                    
                 </div>
             </div>
         </section>

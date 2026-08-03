@@ -16,10 +16,10 @@ const projectLinks = [
 ];
 
 const socialLinks = [
-    { name: 'Facebook', icon: FaFacebookF, href: 'https://facebook.com' },
-    { name: 'Instagram', icon: FaInstagram, href: 'https://instagram.com' },
-    { name: 'LinkedIn', icon: FaLinkedinIn, href: 'https://linkedin.com' },
-    { name: 'YouTube', icon: FaYoutube, href: 'https://youtube.com' },
+    { name: 'Facebook', icon: FaFacebookF, href: 'https://www.facebook.com/profile.php?id=61575598864077 ' },
+    { name: 'Instagram', icon: FaInstagram, href: 'https://www.instagram.com/alhindinfra/' },
+    // { name: 'LinkedIn', icon: FaLinkedinIn, href: 'https://linkedin.com' },
+    { name: 'YouTube', icon: FaYoutube, href: 'https://www.youtube.com/@alhindinfra' },
 ];
 
 export default function Footer() {
@@ -88,10 +88,10 @@ export default function Footer() {
                             <li className="flex items-start gap-3">
                                 <FiPhone className="text-[#C9A227] mt-0.5 shrink-0" size={16} />
                                 <a
-                                    href="tel:+919876543210"
+                                    href="tel:+919391000156"
                                     className="text-sm text-white/60 hover:text-[#C9A227] transition-colors duration-300"
                                 >
-                                    +91 98765 43210
+                                    +91 93910 00156
                                 </a>
                             </li>
                             <li className="flex items-start gap-3">
@@ -100,14 +100,13 @@ export default function Footer() {
                                     href="mailto:info@alhindinfra.com"
                                     className="text-sm text-white/60 hover:text-[#C9A227] transition-colors duration-300"
                                 >
-                                    info@alhindinfra.com
+                                    alhindinfrasale@gmail.com
                                 </a>
                             </li>
                             <li className="flex items-start gap-3">
                                 <FiMapPin className="text-[#C9A227] mt-0.5 shrink-0" size={16} />
                                 <span className="text-sm text-white/60 leading-relaxed">
-                                    Plot No. 24, Financial District, Shamshabad, Hyderabad,
-                                    Telangana
+                                    12-2-728/2/105, Rethibowli, Pillar No 43, Opposite Indian Oil Petrol Pump, Srinivasa Plaza, Hyderabad, Telangana, 500028.
                                 </span>
                             </li>
                         </ul>

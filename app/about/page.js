@@ -4,7 +4,12 @@ import OurExpertise from "@/components/About/OurExpertise";
 import WhyInvestWithUs from "@/components/About/WhyInvestWithUs";
 import CoreValues from "@/components/About/CoreValues";
 
-// adding comment to push code
+
+export const metadata = {
+  title: "About Al Hind Infra | Plotted Developments Near Shamshabad",
+  description:
+    "Learn about Al Hind Infra, a trusted real estate developer offering premium plotted developments near Shamshabad with clear documentation, strategic locations, and customer-focused services.",
+};
 
 
 const page = () => {

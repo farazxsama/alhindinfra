@@ -2,6 +2,13 @@ import React from 'react'
 import CompletedHero from "@/components/Completed/CompletedHero";
 import CompletedProjectsShowcase from "@/components/Completed/CompletedProjectsShowcase"
 
+
+export const metadata = {
+  title: "Completed Projects | Premium Plots Near Shamshabad | Al Hind Infra",
+  description:
+    "Explore completed plotted developments by Al Hind Infra with premium layouts, clear documentation, and excellent investment opportunities.",
+};
+
 const page = () => {
   return (
     <div>

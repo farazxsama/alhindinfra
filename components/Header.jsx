@@ -178,7 +178,7 @@ function MobileDrawer({ mobileOpen, setMobileOpen }) {
 
         <div className="px-6 pb-8 pt-4 border-t border-white/10 shrink-0">
           <a
-            href="tel:+911234567890"
+            href="tel:+919391000156"
             onClick={() => setMobileOpen(false)}
             className="flex items-center justify-center gap-2 w-full bg-[#C9A227] hover:bg-[#A67C00] text-[#111111] text-sm font-semibold tracking-wide py-4 rounded-md transition-colors duration-300"
           >
@@ -310,7 +310,7 @@ export default function Header() {
 
           <div className="hidden lg:flex items-center gap-4">
           <a  
-              href="tel:+911234567890"
+              href="tel:+919391000156"
               className="flex items-center gap-2 bg-[#C9A227] hover:bg-[#A67C00] text-white text-sm font-medium px-5 py-2.5 rounded-md transition-colors duration-300"
             >
               <FiPhone size={16} />

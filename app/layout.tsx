@@ -19,9 +19,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Al Hind Infra | Premium Real Estate & Residential Projects in Hyderabad",
-  description: "Al Hind Infra offers premium real estate projects in Hyderabad, including residential plots and modern developments. Explore ongoing and completed projects, view galleries, and connect with our experts today.",
+export const metadata = {
+  title: "Premium Open Plots Near Shamshabad | Al Hind Infra",
+  description:
+    "Invest in premium open plots near Shamshabad with Al Hind Infra. Clear title, spot registration, gated community, and well-planned layouts at attractive prices.",
+    authors: 'Al Hind Infra',
 };
 
 export default function RootLayout({

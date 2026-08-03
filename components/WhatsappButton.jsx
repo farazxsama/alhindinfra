@@ -2,7 +2,7 @@
 import { RiWhatsappLine } from "react-icons/ri";
 
 /* ── Replace with your actual WhatsApp number ── */
-const WHATSAPP_NUMBER = "919876543210"; // format: country code + number, no +
+const WHATSAPP_NUMBER = "919391000156"; // format: country code + number, no +
 const MESSAGE = "Hello! I'd like to visit the site.";
 
 export default function WhatsAppButton() {

@@ -59,8 +59,9 @@ export default function HeroSection() {
                             variant="dark"
                             title={
                                 <>
-                                    Get a Free{' '}
-                                    <span className="text-[#C9A227]">Consultation</span>
+                                    Book a {' '}
+                                    <span className="text-[#C9A227]">Free Site Visit</span>
+                                    
                                 </>
                             }
                             buttonText="Submit Enquiry"

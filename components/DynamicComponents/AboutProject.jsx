@@ -28,8 +28,8 @@ export default function AboutProject({ project }) {
           <div className="lg:sticky lg:top-28">
             <EnquiryForm
               variant="light"
-              title="Enquiry Form"
-              buttonText="Book Site Visit"
+              title="Book a Free Site Visit"
+              buttonText="Submit"
               note="Our team will contact you within 24 hours."
             />
           </div>
